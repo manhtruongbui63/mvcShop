@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = mvcShop
-build_property.ProjectDir = D:\Code\mvcShop\mvcShop\
+build_property.ProjectDir = /Users/manhtruong/Code/mvcShop/mvcShop/
