@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Aa5iZBUzO230XkydHHPQNf3XQG8lKcx+ZkyafGdnCqkdja/UY75LA6vEaQzMrjm0lGWta3zwihh/qYymBa+/EA==",
+  "dgSpecHash": "q0eRJt6L/f2ozrd0crLoYIRhWVeh3dRuK8lhnzrmCgsvu53SA8z/GV+DeGdvNnb64YOO9fAWB4qrnIZh9VrofQ==",
   "success": true,
-  "projectFilePath": "D:\\Code\\mvcShop\\mvcShop\\mvcShop.csproj",
+  "projectFilePath": "/Users/manhtruong/Code/mvcShop/mvcShop/mvcShop.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
