@@ -23,6 +23,13 @@ namespace OnlineShop.Areas.Admin.Controllers
             return View();
         }
 
+        public ActionResult Edit(int id)
+        {
+            var category = new CategoryDao().ViewDetail(id);
+           // SetViewBag();
+            return View(category);
+        }
+
         [HttpPost]
         public ActionResult Create(Category model)
         {
@@ -40,6 +47,31 @@ namespace OnlineShop.Areas.Admin.Controllers
                 }
             }
             return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Category model)
+        {
+            if (ModelState.IsValid)
+            {
+                var currentCulture = Session[CommonConstants.CurrentCulture];
+                var result = new CategoryDao().Update(model);
+                if (result)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Update category failse");
+                }
+            }
+            return View(model);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            new CategoryDao().Delete(id);
+            return RedirectToAction("Index");
         }
     }
 }

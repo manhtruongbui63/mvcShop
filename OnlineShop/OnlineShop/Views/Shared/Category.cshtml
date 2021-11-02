@@ -1,0 +1,11 @@
+﻿@model List<Model.EF.Category>
+
+<div class="wrap">
+    <!-- start header menu -->
+    <ul class="megamenu skyblue">
+        @foreach (var item in Model)
+        {
+            <li><a class="color1" href="/category/@item.MetaTitle-@item.ID">@item.Name</a></li>
+        }
+    </ul>
+</div>

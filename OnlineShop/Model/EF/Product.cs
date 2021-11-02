@@ -12,6 +12,7 @@ namespace Model.EF
         public long ID { get; set; }
 
         [StringLength(250)]
+        [Required(ErrorMessage = "The Name field is required")]
         public string Name { get; set; }
 
         public bool? Status { get; set; }
@@ -20,6 +21,7 @@ namespace Model.EF
         public string MetaTitle { get; set; }
 
         [StringLength(250)]
+        [Required(ErrorMessage = "The Description field is required")]
         public string Description { get; set; }
 
         [StringLength(250)]
@@ -27,11 +29,13 @@ namespace Model.EF
 
         public decimal? Price { get; set; }
 
+        [Required(ErrorMessage = "The Quantity field is required")]
         public int? Quantity { get; set; }
 
         public long? CategoryID { get; set; }
 
         [Column(TypeName = "ntext")]
+        [Required(ErrorMessage = "The Detail field is required")]
         public string Detail { get; set; }
 
         public DateTime? CreatedDate { get; set; }

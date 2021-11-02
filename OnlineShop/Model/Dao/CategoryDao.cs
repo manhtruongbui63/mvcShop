@@ -33,5 +33,47 @@ namespace Model.Dao
         {
             return db.ProductCategories.Find(id);
         }
+
+        public Category ViewDetail(int id)
+        {
+            return db.Categories.Find(id);
+        }
+
+        public bool Update(Category entity)
+        {
+            try
+            {
+                var c = db.Categories.Find(entity.ID);
+                c.Name = entity.Name;
+                c.MetaTitle = entity.MetaTitle;
+                c.Status = entity.Status;
+                c.ModifiedBy = entity.ModifiedBy;
+                c.ModifiedDate = DateTime.Now;
+                
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public bool Delete(int id)
+        {
+            try
+            {
+                var c = db.Categories.Find(id);
+                db.Categories.Remove(c);
+                db.SaveChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
     }
 }
