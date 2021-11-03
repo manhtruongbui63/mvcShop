@@ -145,12 +145,15 @@
     <Compile Include="Areas\Admin\Models\LoginModel.cs" />
     <Compile Include="Common\CommonConstants.cs" />
     <Compile Include="Common\Encryptor.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RegisterModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common\UserLogin.cs" />
@@ -2939,6 +2942,7 @@
     <Content Include="assets\client\images\us.png" />
     <Content Include="assets\client\images\wish.png" />
     <Content Include="assets\client\images\zoom.png" />
+    <Content Include="assets\client\js\cartController.js" />
     <Content Include="assets\client\js\easing.js" />
     <Content Include="assets\client\js\jquery.etalage.min.js" />
     <Content Include="assets\client\js\jquery.flexisel.js" />
@@ -3197,6 +3201,11 @@
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Product\Category.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\Payment.cshtml" />
+    <Content Include="Views\Cart\Success.cshtml" />
+    <Content Include="Views\Shared\HeaderCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

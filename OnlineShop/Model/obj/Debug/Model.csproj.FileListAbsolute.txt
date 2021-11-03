@@ -30,3 +30,5 @@ C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Model\obj\D
 C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Model\obj\Debug\Model.dll
 C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Model\obj\Debug\Model.pdb
+C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Model\bin\Debug\Common.dll
+C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Model\bin\Debug\Common.pdb

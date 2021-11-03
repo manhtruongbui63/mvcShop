@@ -53,7 +53,7 @@ namespace Model.Dao
             return db.Products.SingleOrDefault(x => x.Name == name);
         }
 
-        public Product ViewDetail(int id)
+        public Product ViewDetail(long id)
         {
             return db.Products.Find(id);
         }
@@ -91,9 +91,11 @@ namespace Model.Dao
             return db.Products.OrderByDescending(x => x.ID!=id && x.CategoryID == product.CategoryID).ToList();
         }
 
-        public List<Product> ListByCategoryId(long categoryID)
+        public List<Product> ListByCategoryId(int categoryID,ref int totalRecord,int page=1,int pageSize=2)
         {
-            return db.Products.Where(x => x.CategoryID == categoryID).ToList();
+            totalRecord = db.Products.Where(x => x.CategoryID == categoryID).Count();
+            var model = db.Products.Where(x => x.CategoryID == categoryID).OrderByDescending(x=>x.CreatedDate).Skip((page-1)*pageSize).Take(pageSize).ToList();
+            return model;
         }
     }
 }

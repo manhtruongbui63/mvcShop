@@ -14,11 +14,11 @@ namespace OnlineShop.Areas.Admin.Controllers
     {
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            var sess = (UserLogin)Session[CommonConstants.USER_SESSION];
+            var sess = (UserLogin)Session[CommonConstants.ADMIN_SESSION];
             if (sess == null)
             {
                 filterContext.Result = new RedirectToRouteResult(new 
-                    RouteValueDictionary(new { controller = "Admin/Login", action = "Index", Erea = "Admin" }));
+                    RouteValueDictionary(new { controller = "Login", action = "Index", Erea = "Admin" }));
             }
 
             base.OnActionExecuting(filterContext);

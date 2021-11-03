@@ -180,3 +180,5 @@ C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\OnlineShop\
 C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\OnlineShop\obj\Debug\OnlineShop.pdb
 C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\OnlineShop\bin\CKFinder.dll
 C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\OnlineShop\bin\CKFinder.pdb
+C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\OnlineShop\bin\Common.dll
+C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\OnlineShop\bin\Common.pdb

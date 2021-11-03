@@ -21,8 +21,8 @@ namespace OnlineShop.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 var dao = new UserDao();
-                var result = dao.Login(model.UserName,Encryptor.MD5Hash(model.PassWord));
-                if (result)
+                var result = dao.LoginAdmin(model.UserName,Encryptor.MD5Hash(model.PassWord));
+                if (result == 1)
                 {
                     var user = dao.GetById(model.UserName);
                     var userSession = new UserLogin();
@@ -30,7 +30,7 @@ namespace OnlineShop.Areas.Admin.Controllers
                     userSession.UserName = user.UserName;
                     userSession.UserID = user.ID;
 
-                    Session.Add(CommonConstants.USER_SESSION, userSession);
+                    Session.Add(CommonConstants.ADMIN_SESSION, userSession);
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -39,6 +39,12 @@ namespace OnlineShop.Areas.Admin.Controllers
                 }
             }
             return View("Index");
+        }
+
+        public ActionResult Logout()
+        {
+            Session[CommonConstants.ADMIN_SESSION] = null;
+            return Redirect("/");
         }
     }
 }

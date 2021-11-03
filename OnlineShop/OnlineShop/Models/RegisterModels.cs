@@ -21,6 +21,7 @@ namespace OnlineShop.Models
         public string Password { get; set; }
 
         [Display(Name = "Name")]
+        [Required(ErrorMessage = "Please enter a valid name")]
         public string Name { get; set; }
 
         [Display(Name = "Email")]
@@ -28,9 +29,11 @@ namespace OnlineShop.Models
         public string Email { get; set; }
 
         [Display(Name = "Address")]
+        [Required(ErrorMessage = "Please enter a valid address")]
         public string Address { get; set; }
 
         [Display(Name = "Phone Number")]
+        [Required(ErrorMessage = "Please enter a valid phone number")]
         public string Phone { get; set; }
     }
 }
