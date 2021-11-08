@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 @section jsFooter {
     <script src="/assets/client/js/cartController.js"></script>
@@ -27,7 +28,7 @@
                             <tr style="font-weight:bold">
                                 <td>Name</td>
                                 <td>Image</td>
-                                <td >Quantity</td>
+                                <td>Quantity</td>
                                 <td style="text-align:center">Unit Price</td>
                                 <td style="text-align:center">Total Price</td>
                                 <td>Action</td>
@@ -42,7 +43,7 @@
                                     <td><input style="max-width:50px; text-align:center" type="text" class="txtQuantity" data-id="@item.Product.ID" value="@item.Quantity" /></td>
                                     <td style="text-align:center">@item.Product.Price.GetValueOrDefault(0).ToString("N0")</td>
                                     <td style="text-align:center">@((item.Product.Price.GetValueOrDefault(0) * item.Quantity).ToString("N0"))</td>
-                                    <td><a href="#" data-id="@item.Product.ID" class="btn btn-danger">Xóa</a></td>
+                                    <td><a href="#" data-id="@item.Product.ID" class="btn btn-delete btn-danger ">Xóa</a></td>
                                 </tr>
                             }
                         </tbody>
@@ -61,6 +62,19 @@
                     <span class="alert alert-danger">Chưa có sản phẩm nào trong giỏ hàng</span>
                 }
             </div>
+        </div>
+
+        <div class="box1" style="margin:35px 0;max-width:960px;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
         </div>
 
         <div class="clear"></div>

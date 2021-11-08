@@ -48,8 +48,8 @@
         $('.btn-delete').off('click').on('click', function (e) {
             e.preventDefault();
             $.ajax({
-                url: '/Cart/DeleteAll',
                 data: { id: $(this).data('id') },
+                url: '/Cart/Delete',
                 dataType: 'json',
                 type: 'POST',
                 success: function (res) {

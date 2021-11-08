@@ -28,6 +28,8 @@ namespace OnlineShop.Controllers
             return View(list);
         }
 
+
+
         public ActionResult AddItem(long productId, int quantity)
         {
             // ViewDetail(productId)
@@ -131,12 +133,22 @@ namespace OnlineShop.Controllers
         {
             if (Session[CommonConstants.USER_SESSION] != null)
             {
+                var session = (UserLogin)Session[OnlineShop.Common.CommonConstants.USER_SESSION];
+                string username = session.UserName;
+                var user = new UserDao().GetById(username);
+
+                // user.Address = address;
+                // user.Phone = mobile;
+                // user.Name = shipName;
+                // user.Email = email;
+
                 var order = new Order();
+                order.CustomerID = user.ID;
                 order.CreatedDate = DateTime.Now;
                 order.ShipAddress = address;
                 order.ShipMobile = mobile;
                 order.ShipName = shipName;
-                order.ShipName = email;
+                order.ShipEmail = email;
 
                 try
                 {
@@ -152,6 +164,7 @@ namespace OnlineShop.Controllers
                         orderDetail.Quantity = item.Quantity;
                         detailDao.Insert(orderDetail);
                     }
+                    Session[CommonConstants.CartSession] = null;
                 }
                 catch (Exception ex)
                 {
