@@ -71,17 +71,18 @@
 
 <div class="wrap">
     <div class="content-bottom" style="margin-top:5%">
+        <h3 class="m_3" style="margin-bottom:25px; font-size:28px">Products News</h3>
         <div class="box1" style="display:flex;justify-content:space-between;flex-wrap:wrap">
             @foreach (var item in listNewProducts)
             {
                 var url = "detail/" + item.MetaTitle + "-" + item.ID;
                 <div class="item" style="width:32%;margin-bottom:15px;border:1px solid #DDD">
-                    <a href="@url" >
+                    <a href="@url">
                         <div class="view view-fifth">
                             <div class="top_box">
                                 <h3 class="m_1" style="min-height:33.78px">@item.Name</h3>
                                 <div class="grid_img">
-                                    <div class="css3" style="max-width:50%;margin:0 auto;padding:10px"><img src="@item.Image" alt="@item.Name" style="width:100%"/></div>
+                                    <div class="css3" style="max-width:50%;margin:0 auto;padding:10px"><img src="@item.Image" alt="@item.Name" style="width:100%" /></div>
                                     <div class="mask">
                                         <div class="info">Quick View</div>
                                     </div>

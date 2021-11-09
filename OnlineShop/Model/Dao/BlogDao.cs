@@ -28,6 +28,12 @@ namespace Model.Dao
             return db.Contents.OrderByDescending(x => x.CreatedDate).Take(top).ToList();
         }
 
+        public List<Content> ListAllContent(ref int totalRecord, int page = 1, int pageSize = 10)
+        {
+            totalRecord = db.Contents.Count();
+            var model = db.Contents.OrderByDescending(x => x.CreatedDate).Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            return model;
+        }
         public IEnumerable<Content> ListAllPaging(int page, int pageSize)
         {
             return db.Contents.OrderByDescending(x => x.ID).ToPagedList(page, pageSize);

@@ -5,7 +5,7 @@
     var relatedProduct = (List<Model.EF.Product>)ViewBag.RelatedPRoduct;
 }
 
-<div class="single">
+<div class="single"  style="padding:3% 0">
     <div class="wrap">
         <div class="cont span_2_of_3">
             <div class="labout span_1_of_a1">
@@ -28,9 +28,7 @@
                     <span class="actual">£ @(Model.Price!=0 ? Model.Price.Value.ToString("N0") : "Update...")</span>
                 </div>
                 <div class="btn_form">
-                    <form>
-                        <input type="submit" value="buy now" title="">
-                    </form>
+                        <a class="btn btn-secondary" role="button" href="/them-gio-hang?productId=@Model.ID&quantity=1">BUY NOW</a>
                 </div>
                 <p class="m_desc">@Model.Description</p>
 
@@ -50,6 +48,7 @@
             </div>
             <div class="clear"></div>
 
+            <h3 class="m_3">Products Related</h3>
             <ul id="flexiselDemo3">
                 @foreach (var item in relatedProduct)
                 {
@@ -86,7 +85,7 @@
                     });
 
                     $("#flexiselDemo3").flexisel({
-                        visibleItems: 5,
+                        visibleItems: 3,
                         animationSpeed: 1000,
                         autoPlay: true,
                         autoPlaySpeed: 3000,
