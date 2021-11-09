@@ -4,3 +4,9 @@ C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Common\obj\
 C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Common\obj\Debug\Common.dll
 C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Common\obj\Debug\Common.pdb
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Common\bin\Debug\Common.dll
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Common\bin\Debug\Common.pdb
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Common\obj\Debug\Common.dll
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Common\obj\Debug\Common.pdb

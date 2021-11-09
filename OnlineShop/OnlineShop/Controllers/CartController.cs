@@ -171,7 +171,8 @@ namespace OnlineShop.Controllers
                     //Ghi log
                     return Redirect("/loi-thanh-toan");
                 }
-
+                // --lam moi gio hang
+                Session[CartSession] = null;
                 return Redirect("/hoan-thanh");
             }
             else

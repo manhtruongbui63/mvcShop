@@ -78,6 +78,16 @@ namespace OnlineShop
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new[] { "OnlineShop.Controllers" }
             );
+
+
+            routes.MapRoute(
+            name: "Blog",
+            url: "blog",
+            defaults: new { controller = "Blog", action = "Index", id = UrlParameter.Optional },
+            namespaces: new[] { "OnlineShop.Controllers" }
+        );
         }
+
     }
-}
+    }
+

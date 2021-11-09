@@ -32,3 +32,21 @@ C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Model\obj\D
 C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Model\obj\Debug\Model.pdb
 C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Model\bin\Debug\Common.dll
 C:\Users\taoph\Desktop\Project_PRN_211_OnlineShop\mvcShop\OnlineShop\Model\bin\Debug\Common.pdb
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\Model.dll.config
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\Model.dll
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\Model.pdb
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\Common.dll
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\EntityFramework.dll
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\PagedList.dll
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\PagedList.Mvc.dll
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\Common.pdb
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\EntityFramework.xml
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\PagedList.xml
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\bin\Debug\PagedList.Mvc.xml
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\obj\Debug\Model.dll
+C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\obj\Debug\Model.pdb

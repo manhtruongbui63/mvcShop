@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var listNewContents = (List<Model.EF.Content>)ViewBag.NewContents;
+}
+
+<div class="login">
+    <div class="wrap">
+        <div class="mens-toolbar">
+            <div class="sort" style="width:auto">
+                <div class="sort-by">
+                    <label style="margin-bottom:0;font-size:21px;font-weight:600">
+                        CONTENTS <span class="rating">
+                            <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+                            <label for="rating-input-1-5" class="rating-star1"> </label>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+        <div class="content-bottom" style="margin-top:5%">
+            <div class="box1" style="display:flex;justify-content:space-between;flex-wrap:wrap;height:auto">
+                @foreach (var item in listNewContents)
+                {
+                    var url = "detail/" + item.MetaTitle + "-" + item.ID;
+                    <div class="item" style="width:99%;max-height:auto; margin-bottom:15px;border:1px solid #DDD">
+                        <a href="@url">
+                            <div class="view view-fifth">
+                                <div class="top_box">
+                                    <h3 class="m_1">@item.Name</h3>
+                                    <p class="m_2">@item.CreatedDate</p>
+                                    <div class="grid_img">
+                                        <div class="css3"><img src="@item.Image" alt="" /></div>
+                                        <div class="mask">
+                                            <div class="info">Quick View</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="rating">
+                                <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+                                <label for="rating-input-1-5" class="rating-star1"></label>
+                                <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+                                <label for="rating-input-1-4" class="rating-star1"></label>
+                                <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+                                <label for="rating-input-1-3" class="rating-star1"></label>
+                                <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+                                <label for="rating-input-1-2" class="rating-star"></label>
+                                <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+                                <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+                            </span>
+                            <div class="clear"></div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+
+
+
+        <div class="clear"></div>
+    </div>
+</div>
