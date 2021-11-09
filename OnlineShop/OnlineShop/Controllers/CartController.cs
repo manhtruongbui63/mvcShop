@@ -166,7 +166,7 @@ namespace OnlineShop.Controllers
                     }
                     Session[CommonConstants.CartSession] = null;
                 }
-                catch (Exception ex)
+                catch
                 {
                     //Ghi log
                     return Redirect("/loi-thanh-toan");

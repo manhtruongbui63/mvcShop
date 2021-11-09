@@ -22,7 +22,7 @@ namespace OnlineShop.Controllers
             return View(product);
         }
 
-        public ActionResult Category(int id,int page=1,int pageSize=1)
+        public ActionResult Category(int id,int page=1,int pageSize=8)
         {
             var category = new CategoryDao().ViewDetail(id);
             ViewBag.Category = category;
@@ -34,8 +34,11 @@ namespace OnlineShop.Controllers
 
             int maxPage = 5;
             int totalPage = 0;
-            totalPage = (int)Math.Ceiling((double)(totalRecord / pageSize));
+            
+            totalPage = (int)Math.Ceiling(totalRecord/(float)pageSize);
             ViewBag.TotalPage = totalPage;
+
+
             ViewBag.MaxPage = maxPage;
 
             ViewBag.First = 1;

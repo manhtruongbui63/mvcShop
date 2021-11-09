@@ -14,11 +14,11 @@
             </div>
 
             <div class="pager">
-                @if (ViewBag.TotalPage > 0)
+                @if (ViewBag.TotalPage >= 1)
                 {
                     var pageDisplay = (int)(ViewBag.MaxPage);
                     int totalPage = (int)ViewBag.TotalPage;
-                    int currentPage = ((int)ViewBag.Page);
+                    int currentPage = (int)ViewBag.Page;
 
 
                     var startPage = Math.Max(1, (currentPage - pageDisplay) / 2);
@@ -27,6 +27,7 @@
                     var url = "/category/" + category.MetaTitle + "-" + category.ID;
 
                     <ul class="dc_pagination dc_paginationA dc_paginationA06">
+
                         @if (currentPage > ViewBag.First)
                         {
                             <li><a href="@url?page=@ViewBag.Prev" class="previous">Previous</a></li>
@@ -70,17 +71,17 @@
                         <div class="view1 view-fifth1">
                             <div class="top_box">
                                 <h3 class="m_1"></h3>
-                                <p class="m_2">@item.Name</p>
+                                <p class="m_2" style="min-height:37.33px">@item.Name</p>
                                 <div class="grid_img">
-                                    <div class="css3"><img src="@item.Image" alt="" /></div>
+                                    <div class="css3" style="width:50%;margin:0 auto;padding:10px"><img src="@item.Image" alt="" /></div>
                                     <div class="mask1">
                                         <div class="info">Quick View</div>
                                     </div>
                                 </div>
-                                <div class="price">£@item.Price</div>
+                                <div class="price">£ @(item.Price!=0 ? item.Price.Value.ToString("N0") : "Update...")</div>
                             </div>
                         </div>
-                        <span class="rating1">
+                        <span class="rating1" style="width:50%">
                             <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
                             <label for="rating-input-1-5" class="rating-star1"></label>
                             <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
@@ -93,7 +94,7 @@
                             <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
                             (@item.Quantity)
                         </span>
-                        <ul class="list2">
+                        <ul class="list2" style="padding:1.5% 0;margin-bottom:0;width:50%">
                             <li>
                                 <img src="/assets/client/images/plus.png" alt="" />
                                 <ul class="icon1 sub-icon1 profile_img">

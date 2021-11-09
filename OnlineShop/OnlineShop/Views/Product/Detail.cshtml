@@ -25,7 +25,7 @@
                 <h3 class="m_3">@Model.Name</h3>
 
                 <div class="price_single">
-                    <span class="actual">$@Model.Price</span>
+                    <span class="actual">£ @(Model.Price!=0 ? Model.Price.Value.ToString("N0") : "Update...")</span>
                 </div>
                 <div class="btn_form">
                     <form>
@@ -49,6 +49,7 @@
                 <p class="m_text">@Html.Raw(Model.Detail)</p>
             </div>
             <div class="clear"></div>
+
             <ul id="flexiselDemo3">
                 @foreach (var item in relatedProduct)
                 {
@@ -57,7 +58,7 @@
                         <img src="@item.Image" />
                         <div class="grid-flex">
                             <a href="@url">@item.Name</a>
-                            <p>@item.Price</p>
+                            <p>£ @(item.Price!=0?item.Price.Value.ToString("N0"):"Update...")</p>
                         </div>
                     </li>
                 }

@@ -31,6 +31,7 @@ namespace Model.Dao
                 p.Name = entity.Name;
                 p.Description = entity.Description;
                 p.MetaTitle = entity.MetaTitle;
+                p.CategoryID = entity.CategoryID;
                 p.Image = entity.Image;
                 p.Quantity = entity.Quantity;
                 p.Price = entity.Price;
@@ -42,7 +43,7 @@ namespace Model.Dao
                 db.SaveChanges();
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
@@ -88,10 +89,10 @@ namespace Model.Dao
         public List<Product> ListReplatedProduct(int id)
         {
             var product = db.Products.Find(id);
-            return db.Products.OrderByDescending(x => x.ID!=id && x.CategoryID == product.CategoryID).ToList();
+            return db.Products.Where(x => x.ID != id && x.CategoryID == product.CategoryID).ToList();
         }
 
-        public List<Product> ListByCategoryId(int categoryID,ref int totalRecord,int page=1,int pageSize=2)
+        public List<Product> ListByCategoryId(int categoryID,ref int totalRecord,int page=1,int pageSize=10)
         {
             totalRecord = db.Products.Where(x => x.CategoryID == categoryID).Count();
             var model = db.Products.Where(x => x.CategoryID == categoryID).OrderByDescending(x=>x.CreatedDate).Skip((page-1)*pageSize).Take(pageSize).ToList();

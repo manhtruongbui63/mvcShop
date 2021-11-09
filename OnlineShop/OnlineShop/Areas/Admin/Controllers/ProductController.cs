@@ -48,7 +48,7 @@ namespace OnlineShop.Areas.Admin.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Add category failse");
+                    ModelState.AddModelError("", "Add product failse");
                 }
             }
             SetViewBag();
