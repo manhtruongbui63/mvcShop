@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    //var list = (List<Model.EF.Order>)ViewBag.ListHistory;
 
 }
 @section jsFooter {
@@ -55,28 +56,16 @@
                         <button id="btnPayment" class="btn btn-success">Thanh toán</button>
                         <button id="btnDeleteAll" class="btn btn-danger">Xóa giỏ hàng</button>
                     </div>
-
                 }
                 else
                 {
                     <span class="alert alert-danger">Chưa có sản phẩm nào trong giỏ hàng</span>
                 }
             </div>
+            <div class="" style="margin:35px auto">
+                <a id="" class="btn btn-primary" href="/history">History</a>
+            </div>
         </div>
-
-        <div class="box1" style="margin:35px 0;max-width:960px;">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <td>Name</td>
-                    </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table>
-        </div>
-
         <div class="clear"></div>
     </div>
 </div>

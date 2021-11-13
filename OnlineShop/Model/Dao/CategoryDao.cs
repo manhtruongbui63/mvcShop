@@ -1,4 +1,5 @@
-﻿using Model.EF;
+﻿using Common;
+using Model.EF;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace Model.Dao
         }
         public long Insert(Category category)
         {
+            category.MetaTitle = StringHelper.ToUnsignString(category.Name);
             db.Categories.Add(category);
             db.SaveChanges();
             return category.ID;
@@ -45,7 +47,7 @@ namespace Model.Dao
             {
                 var c = db.Categories.Find(entity.ID);
                 c.Name = entity.Name;
-                c.MetaTitle = entity.MetaTitle;
+                c.MetaTitle = StringHelper.ToUnsignString(entity.Name);
                 c.Status = entity.Status;
                 c.ModifiedBy = entity.ModifiedBy;
                 c.ModifiedDate = DateTime.Now;

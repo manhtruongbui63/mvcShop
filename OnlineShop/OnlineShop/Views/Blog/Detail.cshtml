@@ -1,0 +1,173 @@
+﻿@model Model.EF.Content
+@{
+    ViewBag.Title = "Blog Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var relatedBlog = (List<Model.EF.Content>)ViewBag.RelatedBlog;
+}
+
+@section slide{
+    <div class="index-banner">
+        <div class="wmuSlider example1" style="height: 560px;">
+            <div class="wmuSliderWrapper">
+                <article style="position: relative; width: 100%; opacity: 1;">
+                    <div class="banner-wrap">
+                        <div class="slider">
+                            <img src="/assets/client/images/banner6.jpg" alt="" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </article>
+                <article style="position: absolute; width: 100%; opacity: 0;">
+                    <div class="banner-wrap">
+                        <div class="slider">
+                            <img src="/assets/client/images/banner7.jpg" alt="" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </article>
+                <article style="position: absolute; width: 100%; opacity: 0;">
+                    <div class="banner-wrap">
+                        <div class="slider">
+                            <img src="/assets/client/images/banner3.jpg" alt="" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </article>
+                <article style="position: absolute; width: 100%; opacity: 0;">
+                    <div class="banner-wrap">
+                        <div class="slider">
+                            <img src="/assets/client/images/banner4.jpg" alt="" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </article>
+                <article style="position: absolute; width: 100%; opacity: 0;">
+                    <div class="banner-wrap">
+                        <div class="slider">
+                            <img src="/assets/client/images/banner5.jpg" alt="" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </article>
+            </div>
+            <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a>
+            <ul class="wmuSliderPagination">
+                <li><a href="#" class="">0</a></li>
+                <li><a href="#" class="">1</a></li>
+                <li><a href="#" class="wmuActive">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+            <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a><ul class="wmuSliderPagination"><li><a href="#" class="wmuActive">0</a></li><li><a href="#" class="">1</a></li><li><a href="#" class="">2</a></li><li><a href="#" class="">3</a></li><li><a href="#" class="">4</a></li></ul>
+        </div>
+        <script src="/assets/client/js/jquery.wmuSlider.js"></script>
+        <script type="text/javascript" src="/assets/client/js/modernizr.custom.min.js"></script>
+        <script>
+            $('.example1').wmuSlider();
+        </script>
+    </div>
+}
+
+<div class="single" style="padding:3% 0">
+    <div class="wrap">
+        <div class="cont span_2_of_3">
+            <div class="cont1 span_2_of_a1" style="width:100%">
+                <h3 class="m_3" style="font-size:25px">@Model.Name</h3>
+                <p class="m_desc">@Model.CreatedDate</p>
+
+                <div class="social_single">
+                    <ul>
+                        <li class="fb"><a href="#"><span> </span></a></li>
+                        <li class="tw"><a href="#"><span> </span></a></li>
+                        <li class="g_plus"><a href="#"><span> </span></a></li>
+                        <li class="rss"><a href="#"><span> </span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="toogle" style="margin-bottom:5%">
+                <p class="m_text">@Html.Raw(Model.Detail)</p>
+            </div>
+            <div class="clear"></div>
+
+            <h3 class="m_3">Blog Related</h3>
+            <ul id="flexiselDemo3">
+                @foreach (var item in relatedBlog)
+                {
+                    var url = "/blog-detail/" + item.MetaTitle + "-" + item.ID;
+                    <li>
+                        @*<img src="@item.Image" />
+                            <div class="grid-flex">
+                                <a href="@url">@item.Name</a>
+                            </div>*@
+                        <div class="new-item" style="margin-right: 3px">
+                            <a href="@url">
+                                <div class="view1 view-fifth1" style="position:relative">
+                                    <div class="grid_img">
+                                        <div class="css3"><img src="@item.Image" alt="" /></div>
+                                    </div>
+                                    <div class="top_box" style="position:absolute; bottom:0;padding:0 5px;margin-bottom:5px">
+                                        <h3 class="m_1" style="color: white; text-shadow: 1px 1px 3px rgb(0 0 0 / 50%)">@item.Name</h3>
+                                        @*<p class="m_2" style="color: white;text-shadow: 1px 1px 3px rgb(0 0 0 / 50%)">@item.CreatedDate</p>*@
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </a>
+                        </div>
+                    </li>
+                }
+            </ul>
+
+            <script type="text/javascript">
+                $(window).load(function () {
+                    $("#flexiselDemo1").flexisel();
+                    $("#flexiselDemo2").flexisel({
+                        enableResponsiveBreakpoints: true,
+                        responsiveBreakpoints: {
+                            portrait: {
+                                changePoint: 480,
+                                visibleItems: 1
+                            },
+                            landscape: {
+                                changePoint: 640,
+                                visibleItems: 2
+                            },
+                            tablet: {
+                                changePoint: 768,
+                                visibleItems: 3
+                            }
+                        }
+                    });
+
+                    $("#flexiselDemo3").flexisel({
+                        visibleItems: 4,
+                        animationSpeed: 1000,
+                        autoPlay: true,
+                        autoPlaySpeed: 3000,
+                        pauseOnHover: true,
+                        enableResponsiveBreakpoints: true,
+                        responsiveBreakpoints: {
+                            portrait: {
+                                changePoint: 480,
+                                visibleItems: 1
+                            },
+                            landscape: {
+                                changePoint: 640,
+                                visibleItems: 2
+                            },
+                            tablet: {
+                                changePoint: 768,
+                                visibleItems: 3
+                            }
+                        }
+                    });
+
+                });
+            </script>
+            <script type="text/javascript" src="/assets/client/js/jquery.flexisel.js"></script>
+
+
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

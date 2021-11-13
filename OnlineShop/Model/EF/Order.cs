@@ -13,6 +13,7 @@ namespace Model.EF
 
         public long? CustomerID { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? CreatedDate { get; set; }
 
         [StringLength(50)]

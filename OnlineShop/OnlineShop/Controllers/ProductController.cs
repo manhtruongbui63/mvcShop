@@ -22,7 +22,7 @@ namespace OnlineShop.Controllers
             return View(product);
         }
 
-        public ActionResult Category(int id,int page=1,int pageSize=8)
+        public ActionResult Category(int id,int page=1,int pageSize=4)
         {
             var category = new CategoryDao().ViewDetail(id);
             ViewBag.Category = category;

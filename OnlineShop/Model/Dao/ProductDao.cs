@@ -1,4 +1,5 @@
-﻿using Model.EF;
+﻿using Common;
+using Model.EF;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace Model.Dao
         }
         public long Insert(Product product)
         {
+            product.MetaTitle = StringHelper.ToUnsignString(product.Name);
+            product.Status = true;
             db.Products.Add(product);
             db.SaveChanges();
             return product.ID;
@@ -30,7 +33,7 @@ namespace Model.Dao
 
                 p.Name = entity.Name;
                 p.Description = entity.Description;
-                p.MetaTitle = entity.MetaTitle;
+                p.MetaTitle = StringHelper.ToUnsignString(entity.Name);
                 p.CategoryID = entity.CategoryID;
                 p.Image = entity.Image;
                 p.Quantity = entity.Quantity;
@@ -89,7 +92,7 @@ namespace Model.Dao
         public List<Product> ListReplatedProduct(int id)
         {
             var product = db.Products.Find(id);
-            return db.Products.Where(x => x.ID != id && x.CategoryID == product.CategoryID).ToList();
+            return db.Products.Where(x => x.ID != id && x.CategoryID == product.CategoryID && x.Price == product.Price).ToList();
         }
 
         public List<Product> ListByCategoryId(int categoryID,ref int totalRecord,int page=1,int pageSize=10)

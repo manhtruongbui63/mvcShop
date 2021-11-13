@@ -1,0 +1,49 @@
+﻿@model List<Model.ViewModel.OrderListByUserId>
+@{
+    ViewBag.Title = "History";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="login">
+    <div class="wrap">
+        <div class="mens-toolbar">
+            <div class="sort" style="width:auto">
+                <div class="sort-by">
+                    <label style="margin-bottom:0;font-size:21px;font-weight:600">History Order:</span></label>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="box1" style="margin:35px 0;max-width:960px;">
+
+            <div class="section group">
+
+                <table class="table">
+                    <thread>
+                        <tr style="font-weight:bold">
+                            <td>Image</td>
+                            <td>Name Product</td>
+                            <th>Date</th>
+                            <td style="text-align:center">Quantity</td>
+                            <td style="text-align:center">Total Price</td>
+
+                        </tr>
+                    </thread>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td><img src="@item.Image" width="100" /></td>
+                            <td>@item.NameProduct</td>
+                            <td style="text-align:center">@item.CreatedDate</td>
+                            <td style="text-align:center">@item.Quantity</td>
+                            <td style="text-align:center">@(item.Price*item.Quantity)</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

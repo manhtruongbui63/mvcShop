@@ -84,7 +84,7 @@ namespace OnlineShop.Areas.Admin.Controllers
 
         public void SetViewBag(int? select = null)
         {
-            var dao = new BlogDao();
+            var dao = new CategoryDao();
             ViewBag.CategoryID = new SelectList(dao.ListAll(), "ID", "Name", select);
         }
     }

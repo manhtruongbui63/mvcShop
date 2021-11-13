@@ -1,4 +1,5 @@
 ﻿using Model.EF;
+using Model.ViewModel;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,30 @@ namespace Model.Dao
         public IEnumerable<Order> ListAllPaging(int page, int pageSize)
         {
             return db.Orders.OrderByDescending(x => x.ID).ToPagedList(page, pageSize);
+        }
+
+        public List<OrderListByUserId> GetProductByUserId(long id)
+        {
+            var user = db.Users.Find(id);
+
+            var model = (from o in db.Orders
+                         join od in db.OrderDetails on o.ID equals od.OrderID
+                         join p in db.Products on od.ProductID equals p.ID
+                         select new OrderListByUserId()
+                         {
+                             ID = p.ID,
+                             NameProduct = p.Name,
+                             Image = p.Image,
+                             OrderID = od.OrderID,
+                             ProductID = od.ProductID,
+                             Quantity = od.Quantity,
+                             Price=od.Price,
+                             orderID = o.ID,
+                             CustomerID = o.CustomerID,
+                             CreatedDate = o.CreatedDate
+                         }
+                         );
+            return model.Where(x => x.CustomerID == id).ToList();
         }
 
         public bool Delete(int id)

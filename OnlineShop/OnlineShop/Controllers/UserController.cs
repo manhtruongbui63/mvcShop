@@ -57,6 +57,7 @@ namespace OnlineShop.Controllers
                     user.Address = model.Address;
                     user.Phone = model.Phone;
                     user.CreatedDate = DateTime.Now;
+                    //user.GroupID = "MEMBER";
                     user.Status = true;
 
                     var result= dao.Insert(user);

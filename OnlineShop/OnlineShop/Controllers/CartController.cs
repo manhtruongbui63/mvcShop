@@ -18,17 +18,45 @@ namespace OnlineShop.Controllers
 
         // GET: Cart
         public ActionResult Index()
-        {
+       {
             var cart = Session[CartSession];
             var list = new List<CartItem>();
             if (cart != null)
             {
                 list = (List<CartItem>)cart;
             }
+
+            if(Session[CommonConstants.USER_SESSION] != null)
+            {
+                var session = (UserLogin)Session[CommonConstants.USER_SESSION];
+                string username = session.UserName;
+                var user = new UserDao().GetById(username);
+
+                var order = new OrderDao();
+                ViewBag.ListHistory = order.GetProductByUserId(user.ID);
+            }
             return View(list);
         }
 
+        public ActionResult History()
+        {
+            
+            if (Session[CommonConstants.USER_SESSION] != null)
+            {
+                var session = (UserLogin)Session[CommonConstants.USER_SESSION];
+                string username = session.UserName;
+                var user = new UserDao().GetById(username);
 
+                var order = new OrderDao();
+                //ViewBag.ListHistory = order.GetProductByUserId(user.ID);
+                var model = order.GetProductByUserId(user.ID);
+                return View(model);
+            }
+            else
+            {
+                return Redirect("/login");
+            }
+        }
 
         public ActionResult AddItem(long productId, int quantity)
         {

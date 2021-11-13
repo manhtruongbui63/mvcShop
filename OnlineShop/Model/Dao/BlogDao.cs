@@ -1,4 +1,5 @@
-﻿using Model.EF;
+﻿using Common;
+using Model.EF;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace Model.Dao
         }
         public long Insert(Content content)
         {
+            content.MetaTitle = StringHelper.ToUnsignString(content.Name);
             db.Contents.Add(content);
             db.SaveChanges();
             return content.ID;
@@ -60,7 +62,7 @@ namespace Model.Dao
                 b.Name = entity.Name;
                 b.Description = entity.Description;
                 b.Image = entity.Image;
-                b.MetaTitle = entity.MetaTitle;
+                b.MetaTitle = StringHelper.ToUnsignString(entity.Name);
                 b.Status = entity.Status;
                 b.Detail = entity.Detail;
                 b.ModifiedBy = entity.ModifiedBy;
@@ -69,7 +71,7 @@ namespace Model.Dao
                 db.SaveChanges();
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
@@ -90,6 +92,12 @@ namespace Model.Dao
                 return false;
             }
 
+        }
+
+        public List<Content> ListReplatedBlog(int id)
+        {
+            var content = db.Contents.Find(id);
+            return db.Contents.Where(x => x.ID != id && x.CategoryID == content.CategoryID).ToList();
         }
 
     }

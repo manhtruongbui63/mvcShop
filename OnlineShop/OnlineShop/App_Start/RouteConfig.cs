@@ -15,6 +15,13 @@ namespace OnlineShop
 
 
             routes.MapRoute(
+            name: "Cart History",
+            url: "history",
+            defaults: new { controller = "Cart", action = "History", id = UrlParameter.Optional },
+            namespaces: new[] { "OnlineShop.Controllers" }
+            );
+
+            routes.MapRoute(
                 name: "Product Category",
                 url: "category/{metatitle}-{id}",
                 defaults: new { controller = "Product", action = "Category", id = UrlParameter.Optional },
@@ -25,6 +32,13 @@ namespace OnlineShop
                 name: "Product Detail",
                 url: "detail/{metatitle}-{id}",
                 defaults: new { controller = "Product", action = "Detail", id = UrlParameter.Optional },
+                namespaces: new[] { "OnlineShop.Controllers" }
+            );
+
+            routes.MapRoute(
+                name: "Blog Detail",
+                url: "blog-detail/{metatitle}-{id}",
+                defaults: new { controller = "Blog", action = "Detail", id = UrlParameter.Optional },
                 namespaces: new[] { "OnlineShop.Controllers" }
             );
 
@@ -85,9 +99,9 @@ namespace OnlineShop
             url: "blog",
             defaults: new { controller = "Blog", action = "Index", id = UrlParameter.Optional },
             namespaces: new[] { "OnlineShop.Controllers" }
-        );
+            );
         }
 
     }
-    }
+}
 
