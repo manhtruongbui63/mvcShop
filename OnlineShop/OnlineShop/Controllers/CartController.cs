@@ -162,8 +162,8 @@ namespace OnlineShop.Controllers
             {
                 var session = (UserLogin)Session[OnlineShop.Common.CommonConstants.USER_SESSION];
                 string username = session.UserName;
+                bool isEnough = true;
                 var user = new UserDao().GetById(username);
-
                 var order = new Order();
                 order.CustomerID = user.ID;
                 order.CreatedDate = DateTime.Now;
@@ -174,19 +174,26 @@ namespace OnlineShop.Controllers
 
                 try
                 {
-                    var id = new OrderDao().Insert(order);
                     var cart = (List<CartItem>)Session[CartSession];
                     var detailDao = new OrderDetailDao();
                     foreach (var item in cart)
                     {
-                        var orderDetail = new OrderDetail();
-                        orderDetail.ProductID = item.Product.ID;
-                        orderDetail.OrderID = id;
-                        orderDetail.Price = item.Product.Price;
-                        orderDetail.Quantity = item.Quantity;
-                        detailDao.Insert(orderDetail);
+                        isEnough = detailDao.SellProduct(item.Product.ID, item.Quantity);
+                        if (isEnough == false)
+                        {
+                            return Redirect("/loi-thanh-toan");
+                        }
+                        else
+                        {
+                            var id = new OrderDao().Insert(order);
+                            var orderDetail = new OrderDetail();
+                            orderDetail.ProductID = item.Product.ID;
+                            orderDetail.OrderID = id;
+                            orderDetail.Price = item.Product.Price;
+                            orderDetail.Quantity = item.Quantity;
+                            detailDao.Insert(orderDetail);
+                        }
                     }
-                    Session[CommonConstants.CartSession] = null;
                 }
                 catch
                 {
@@ -205,6 +212,11 @@ namespace OnlineShop.Controllers
         }
 
         public ActionResult Success()
+        {
+            return View();
+        }
+
+        public ActionResult Error()
         {
             return View();
         }

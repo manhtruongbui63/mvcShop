@@ -10,3 +10,9 @@ C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Common\obj\Debug\Common.cspro
 C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Common\obj\Debug\Common.dll
 C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Common\obj\Debug\Common.pdb
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Common\bin\Debug\Common.dll
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Common\bin\Debug\Common.pdb
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Common\obj\Debug\Common.dll
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Common\obj\Debug\Common.pdb

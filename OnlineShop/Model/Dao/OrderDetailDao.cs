@@ -73,5 +73,15 @@ namespace Model.Dao
                          });
             return model.OrderBy(x => x.Date).ToList();
         }
+
+        // Bán sản phẩm
+        public bool SellProduct(long productId, int quantity)
+        {
+            var product = db.Products.Find(productId);
+            if (product.Quantity < quantity)
+                return false;
+            product.Quantity -= quantity;
+            return true;
+        }
     }
 }

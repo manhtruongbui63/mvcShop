@@ -50,3 +50,21 @@ C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\obj\Debug\Model.csproj.
 C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\obj\Debug\Model.dll
 C:\Users\Hoang Hung\Desktop\pic\mvcShop\OnlineShop\Model\obj\Debug\Model.pdb
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\Model.dll.config
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\Model.dll
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\Model.pdb
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\Common.dll
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\EntityFramework.dll
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\PagedList.dll
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\PagedList.Mvc.dll
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\Common.pdb
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\EntityFramework.xml
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\PagedList.xml
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\bin\Debug\PagedList.Mvc.xml
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\obj\Debug\Model.csproj.CopyComplete
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\obj\Debug\Model.dll
+D:\PRN211_Project\New folder (14)\mvcShop\OnlineShop\Model\obj\Debug\Model.pdb

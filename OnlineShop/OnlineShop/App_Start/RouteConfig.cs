@@ -73,6 +73,13 @@ namespace OnlineShop
             );
 
             routes.MapRoute(
+                name: "Payment Error",
+                url: "loi-thanh-toan",
+                defaults: new { controller = "Cart", action = "Error", id = UrlParameter.Optional },
+                namespaces: new[] { "OnlineShop.Controllers" }
+            );
+
+            routes.MapRoute(
                 name: "Register",
                 url: "register",
                 defaults: new { controller = "User", action = "Register", id = UrlParameter.Optional },

@@ -17,15 +17,19 @@ namespace Model.EF
         public DateTime? CreatedDate { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "ShipName is required")]
         public string ShipName { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "ShipMobile is required")]
         public string ShipMobile { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "ShipAddress is required")]
         public string ShipAddress { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "ShipEmail is required")]
         public string ShipEmail { get; set; }
 
         public int? Status { get; set; }

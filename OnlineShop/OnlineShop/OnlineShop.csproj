@@ -3226,6 +3226,7 @@
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Blog\Detail.cshtml" />
     <Content Include="Views\Cart\History.cshtml" />
+    <Content Include="Views\Cart\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
