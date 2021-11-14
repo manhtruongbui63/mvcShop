@@ -40,14 +40,6 @@ namespace OnlineShop.Controllers
 
         }
 
-        //[ChildActionOnly]
-        //public ActionResult Menu()
-        //{
-        //    var model = new MenuDao().ListAll();
-        //    return PartialView(model);
-        //}
-
-
         public ActionResult Detail(int id)
         {
             var blog = new BlogDao().ViewDetail(id);

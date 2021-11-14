@@ -81,7 +81,7 @@ namespace Model.Dao
 
         public IEnumerable<Product> ListAllPaging(int page, int pageSize)
         {
-            return db.Products.OrderByDescending(x => x.ID).ToPagedList(page, pageSize);
+            return db.Products.OrderByDescending(x => x.CreatedDate).ToPagedList(page, pageSize);
         }
 
         public List<Product> ListNewProduct(int top)

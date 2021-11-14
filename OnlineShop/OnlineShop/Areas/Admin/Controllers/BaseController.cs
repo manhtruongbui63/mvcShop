@@ -23,14 +23,5 @@ namespace OnlineShop.Areas.Admin.Controllers
 
             base.OnActionExecuting(filterContext);
         }
-        // changing culture
-        public ActionResult ChangeCulture(string ddlCulture, string returnUrl)
-        {
-            Thread.CurrentThread.CurrentCulture = new CultureInfo(ddlCulture);
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(ddlCulture);
-
-            Session[CommonConstants.CurrentCulture] = ddlCulture;
-            return Redirect(returnUrl);
-        }
     }
 }

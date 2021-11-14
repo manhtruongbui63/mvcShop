@@ -35,7 +35,6 @@ namespace OnlineShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var currentCulture = Session[CommonConstants.CurrentCulture];
                 var id = new CategoryDao().Insert(model);
                 if (id > 0)
                 {
@@ -54,7 +53,6 @@ namespace OnlineShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var currentCulture = Session[CommonConstants.CurrentCulture];
                 var result = new CategoryDao().Update(model);
                 if (result)
                 {

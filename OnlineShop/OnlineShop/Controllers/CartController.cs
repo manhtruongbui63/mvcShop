@@ -48,7 +48,6 @@ namespace OnlineShop.Controllers
                 var user = new UserDao().GetById(username);
 
                 var order = new OrderDao();
-                //ViewBag.ListHistory = order.GetProductByUserId(user.ID);
                 var model = order.GetProductByUserId(user.ID);
                 return View(model);
             }
@@ -164,11 +163,6 @@ namespace OnlineShop.Controllers
                 var session = (UserLogin)Session[OnlineShop.Common.CommonConstants.USER_SESSION];
                 string username = session.UserName;
                 var user = new UserDao().GetById(username);
-
-                // user.Address = address;
-                // user.Phone = mobile;
-                // user.Name = shipName;
-                // user.Email = email;
 
                 var order = new Order();
                 order.CustomerID = user.ID;
